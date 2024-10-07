@@ -7,20 +7,20 @@
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
-        <add_message>false</add_message>
+        <add_message>true</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_snc_wishlist_wish_item</collection>
-        <condition/>
+        <condition>current.quantity.changes()</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition table="x_snc_wishlist_wish_item">quantity&lt;=0^EQ<item endquery="false" field="quantity" goto="false" newquery="false" operator="&lt;=" or="false" value="0"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
-        <message/>
-        <name/>
+        <message><![CDATA[<p><strong>Please add a quantity greater than zero.</strong></p>]]></message>
+        <name>Validate Quantity</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -40,15 +40,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2c591b52e08112107f4485c9e980e7f0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Validate Quantity</sys_name>
         <sys_overrides/>
         <sys_package display_value="WishList" source="x_snc_wishlist">0ffc0f1ae00112107f4485c9e980e79f</sys_package>
         <sys_policy/>
         <sys_scope display_value="WishList">0ffc0f1ae00112107f4485c9e980e79f</sys_scope>
         <sys_update_name>sys_script_2c591b52e08112107f4485c9e980e7f0</sys_update_name>
-        <sys_updated_by>fred.luddy</sys_updated_by>
-        <sys_updated_on>2024-10-07 09:18:37</sys_updated_on>
+        <sys_updated_by>carol.coughlin</sys_updated_by>
+        <sys_updated_on>2024-10-07 09:29:59</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
